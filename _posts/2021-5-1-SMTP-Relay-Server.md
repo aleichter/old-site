@@ -1,0 +1,7 @@
+---
+layout: post
+title: SMTP relay server
+tags: [smtp, financialPortfolio]
+---
+
+I want to go ahead and configure keycloak to SMTP in order to use the registration and verification features.  Keycloak provides everything you need out of the box for authentication and authorization management so I'm going to stick with using the keycloak ui for all things security.  SMTP is needed to complete the full experience.  I'm not interested in running my own SMTP server so I'm going to use a relay server.  After a bit of research I like sendgrid.net.  100 emails a day for the free account and the setup was relatively easy.  My isp blocks port 25 so sendgrid.net offers additional port both un-secure and secure protocols which allowed me to get this setup relatively quickly.  I'm going to need to come up with an appropriate secrets and configuration strategy (I'm assuming via Hashicorp vault for the secrets) as I don't want to commit the keys for send grid or my account details to the github.  I will need to merge those values at runtime.  If I was running this on K8 it would be easy to use that secrets vault but I don't want to introduce the K8 infrastructure at this time.  As this is a learning exercise that I hope others can use I will stick to docker.  

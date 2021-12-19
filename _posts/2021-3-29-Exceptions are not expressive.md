@@ -1,0 +1,7 @@
+---
+layout: post
+title: Exception are not very readable nor expressive
+tags: [tdd, functionalProgramming, financialPortfolio]
+---
+
+One thing I noticed when re-reading the code is that exception handling via the try catch throw pattern is not very expressive about possibilities or intention.  My personal pattern is to catch exceptions at the top of the call stack.  In this case I plan on catching all exceptions in the controller.  When building my test cases this becomes a little bit problematic for me in terms of expressiveness.  The controller is part of the I/O utility stack and therefore is not in the business logic stack.  My unit tests are focused to validate the business logic.  No where in the method signatures of my classes does it indicate where exceptions are thrown.  Even if it did it is not clear how each class in the call stack might be effected by a thrown exception.  A bit of research on this high-lighted the Either pattern (I like this blog post on it: [https://www.thoughtworks.com/insights/blog/either-data-type-alternative-throwing-exceptions](https://www.thoughtworks.com/insights/blog/either-data-type-alternative-throwing-exceptions)).  I had become aware of this pattern without realizing it while learning golang. I will attempt to use the Either pattern for error handling in my node.js refactor.

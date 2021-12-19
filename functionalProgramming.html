@@ -1,0 +1,11 @@
+---
+layout: page
+permalink: /functionalProgramming/
+---
+
+<h3 class="tag-head">#functionalProgramming</h3>
+<div class="posts">
+{% for post in site.tags.functionalProgramming %}
+    <li><span class="list-date">{{ post.date | date_to_string }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</div>

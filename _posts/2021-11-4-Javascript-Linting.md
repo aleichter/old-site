@@ -1,0 +1,8 @@
+---
+layout: post
+title: Holy Crap! Where has this javascript linting been?!
+tags: [typeScript, financialPortfolio]
+---
+
+If you come from a statically typed language background then a lot of what linting in the javascript world does for you has just been there in your IDE.  Indention enforcement, code conventions, are styles you can configure in your Java/C# IDE.  Should we have been using linting in Java?  Maybe so.  This would ensure coding style standards are embedded in the build pipeline but it is not typically a huge problem.  With JavaScript and even TypeScript it can be a huge problem.  Thus linting is absolutely necessary in group projects.  Airbnb actually publishes their eslint rules to github (https://github.com/airbnb/javascript).  I'm going to use the airbnb lint styles in my project.  While I think this coding standard is primarily for their frontend code I see nothing that prevents it from being utilized for backend services.  Here is my first lint run: ![Lint Output](doc/images/eslint.png)  You can see over 4,000 problems but let's run it again with --fix.  You can see most of these problems are CRLF expected but found LF (something in vscode maybe?) but there are also some indention preferences for 4 spaces instead of 8 (again my vscode setup?).  Here is after running with --fix: ![Lint Fix Output](doc/images/eslint-fix.png)
+Down to 300+ which I expected as I have not completed my conversion from JavaScript to TypeScript so we'll do that first and then run this again.

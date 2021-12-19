@@ -1,0 +1,7 @@
+---
+layout: post
+title: Refactoring to TypeScript
+tags: [angular, typeScript, financialPortfolio]
+---
+
+I now have some professional experience with TypeScript via Angular and I realize how challenging plain 'ole JavaScript can be.  The dynamic types in JavaScript available is powerful but if you want to make sure that your code is expressive enough for the next engineer (who might be you a few months in the future) it makes it difficult to fully understand intentions.  Statically typed languages offer much more readability and maintainability so I've come to appreciate TypeScript.  In this refactoring I've done some research to ensure I understand some best practices around utilizing TypeScript for a nodejs project.  Primarily how to ensure jest will work as intended with ts-jest and the value of linting via eslint.  I've also included husky in the toolset to ensure linting is hooked into the git pipeline.  I have created a new project; portfolio-service-ts and renamed portfolio-service-js to keep the javascript version. Here are a few good articles which provided some guidance: https://levelup.gitconnected.com/node-typescript-mocha-eslint-efad2e3d2943 and https://blog.risingstack.com/building-a-node-js-app-with-typescript-tutorial/

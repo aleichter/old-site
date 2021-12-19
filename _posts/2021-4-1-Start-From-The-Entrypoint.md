@@ -1,0 +1,7 @@
+---
+layout: post
+title: Start developing from the real entry point
+tags: [tdd, financialPortfolio]
+---
+
+I started developing the input which will parse a csv file downloaded from a financial brokers website.  The file contains the activity on the brokerage account.  After doing this I realized I have missed some important input fields.  I recognize that using TDD you should start with the open api for anything you are building so that you can minimize test cases and minimize unnecessary code.  Again my OO days essentially taught me to build each class as if it were a library that someone else might someday use.  Clearly in this example it has causes lots of unnecessary code specifically test cases.  The first iteration of the nodejs OO version of the service I started from the bottom up.  Mainly because I was trying to learn EventStore.  I believe this was a mistake and that I should have actually started with the CSV parser and determined what methods I needed to call from the parser that the service should support.  I do know that if I had taken this approach it would not have been perfect.  I would not have recognized that I need expectedRevision in my API call until after implementing the EventStore code which would have been last and that would have caused me to have to add that field in all other layers of my code.  Still that would have been a much simpler change then what I am now facing. 
