@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+![Profile]({{ site.avatar }})
 
 Some information about you!
 
