@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<p>While each post is useful by itself, note that most everything here is related to a 
+  personal project I am working on for the sole purpose of learning and keep up my technical
+  skills.  You can orient yourself to that project here:  <a href="/Financial-Portfolio/">Financial Portfolio</a>
+</p>
 <div class="posts">
   {% for post in site.posts %}
   <li><span class="list-date">{{ post.date | date_to_string }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
