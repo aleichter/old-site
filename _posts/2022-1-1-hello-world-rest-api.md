@@ -65,4 +65,4 @@ and here is the core.cjl file:
     (println (str "Running webserver at http:/127.0.0.1:" port "/"))))
 ```
 
-Now that this is complete I will move on to a step I should have completed with the JavaScript implementation. Implement a CICD Pipeline that include infrastructure deployment to my personal cloud account from my github account.  I'll focus on deploying to GCP.
+Now that this is complete I will move on to a step I should have completed with the JavaScript implementation. Implement a CICD Pipeline that include infrastructure deployment to my personal cloud account from my github account.  I'll focus first on deploying to GCP.
