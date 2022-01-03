@@ -5,13 +5,13 @@ tags: [clojure, financialPortfolio]
 ---
 
 Next step is to build our first REST API with clojure.  Simple requirement is to just build a single GET method that returns a JSON object:
-```
+```json
 {
     "message": "Hello, World!"
 }
 ```
 Here is an easy to follow tutorial for getting started: <a href="https://medium.com/swlh/building-a-rest-api-in-clojure-3a1e1ae096e">Building a REST API in Clojure</a>.  Here is my project.clj file to show the included dependencies:
-```
+```clojure
 (defproject portfolio-service-clojure "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
@@ -32,7 +32,7 @@ Here is an easy to follow tutorial for getting started: <a href="https://medium.
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
 ```
 and here is the core.cjl file:
-```
+```clojure
 (ns portfolio-service-clojure.core
   (:require [clojure.core]
             [org.httpkit.server :as server]

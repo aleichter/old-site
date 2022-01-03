@@ -20,7 +20,7 @@ The first step is create a service account in my GCP account for terraform to ha
 
 ## Add Credentials to HCL
 The next step was to add credentials to the HCL scripts and commit those changes to the terraform github repo.  As you can see below, I added a gcp_credentials variable and updated the google provider to include the credentials:
-```
+```terraform
 variable "gcp_credentials" {
   type = string
   sensitive = true
@@ -55,7 +55,7 @@ Now my GKE environment is automatically provisioned to my GCP project and I can 
 Notice that the cluster has 3 nodes.  One node for each zone in the region.  I'm going to make a minor change to the HCL and update to 2 nodes for each regions.  so it will end up with 6 nodes in total.
 
 HCL Change:
-```
+```terraform
 variable "gke_num_nodes" {
   default     = 2
   description = "number of gke nodes"
