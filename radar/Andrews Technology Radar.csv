@@ -1,5 +1,5 @@
 name,ring,quadrant,isNew,description
-chronosphere,Adopt,SRE,TRUE,<p>Chronosphere is the only observability platform that puts you back in control by taming rampant data growth and cloud-native complexity, delivering increased business confidence.</p>
-planetscale,Trial,Database,TRUE,<p>The MySQL-compatible serverless database platform.</p>
-test1,Trial,Engineering,TRUE,<p>test tech 1</p>
-test2,Trial,Techniques,TRUE,<p>test tech 2</p>
+"chronosphere","Adopt","SRE",TRUE,"<p>Chronosphere is the only observability platform that puts you back in control by taming rampant data growth and cloud-native complexity, delivering increased business confidence.</p>"
+"planetscale","Trial","Database",TRUE,"<p>The MySQL-compatible serverless database platform.</p>"
+"test1","Trial","Engineering",TRUE,"<p>test tech 1</p>"
+"test2","Trial","Techniques",TRUE,"<p>test tech 2</p>"
